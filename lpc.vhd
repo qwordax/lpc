@@ -33,4 +33,14 @@ port (
 );
 end component lpc_or;
 
+component lpc_xor is
+generic (
+    lpc_size: natural
+);
+port (
+    a: in  std_logic_vector(lpc_size - 1 downto 0);
+    q: out std_logic
+);
+end component lpc_xor;
+
 end package components;
