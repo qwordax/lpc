@@ -23,4 +23,14 @@ port (
 );
 end component lpc_and;
 
+component lpc_or is
+generic (
+    lpc_size: natural
+);
+port (
+    a: in  std_logic_vector(lpc_size - 1 downto 0);
+    q: out std_logic
+);
+end component lpc_or;
+
 end package components;
