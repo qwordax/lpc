@@ -23,9 +23,9 @@ begin
         t := a(0);
 
         for i in 1 to lpc_size - 1 loop
-            t := t nand a(i);
+            t := t and a(i);
         end loop;
 
-        q <= t;
+        q <= not t;
     end process;
 end architecture rtl;
