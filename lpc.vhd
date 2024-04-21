@@ -94,4 +94,16 @@ port (
 );
 end component lpc_tff;
 
+component lpc_jkff is
+port (
+    r:  in  std_logic;
+    s:  in  std_logic;
+    j:  in  std_logic;
+    k:  in  std_logic;
+    en: in  std_logic;
+    cl: in  std_logic;
+    q:  out std_logic
+);
+end component lpc_jkff;
+
 end package components;
