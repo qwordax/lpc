@@ -73,4 +73,15 @@ port (
 );
 end component lpc_xnor;
 
+component lpc_dff is
+port (
+    r:  in  std_logic;
+    s:  in  std_logic;
+    d:  in  std_logic;
+    en: in  std_logic;
+    cl: in  std_logic;
+    q:  out std_logic
+);
+end component lpc_dff;
+
 end package components;
