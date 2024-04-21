@@ -106,4 +106,18 @@ port (
 );
 end component lpc_jkff;
 
+component lpc_rg is
+generic (
+    lpc_width: natural
+);
+port (
+    r:  in  std_logic;
+    s:  in  std_logic;
+    d:  in  std_logic_vector(lpc_width - 1 downto 0);
+    en: in  std_logic;
+    cl: in  std_logic;
+    q:  out std_logic_vector(lpc_width - 1 downto 0)
+);
+end component lpc_rg;
+
 end package components;
