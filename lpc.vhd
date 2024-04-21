@@ -84,4 +84,14 @@ port (
 );
 end component lpc_dff;
 
+component lpc_tff is
+port (
+    r:  in  std_logic;
+    s:  in  std_logic;
+    en: in  std_logic;
+    cl: in  std_logic;
+    q:  out std_logic
+);
+end component lpc_tff;
+
 end package components;
