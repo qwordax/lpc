@@ -134,4 +134,16 @@ port (
 );
 end component lpc_srg;
 
+component lpc_mx is
+generic (
+    lpc_width: natural
+);
+port (
+    d:  in  std_logic;
+    a:  in  std_logic_vector(lpc_width - 1 downto 0);
+    en: in  std_logic;
+    q:  out std_logic_vector(2 ** lpc_width - 1 downto 0)
+);
+end component lpc_mx;
+
 end package components;
