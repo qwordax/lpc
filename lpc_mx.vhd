@@ -8,10 +8,10 @@ generic (
     lpc_width: natural
 );
 port (
-    d:  in  std_logic;
+    d:  in  std_logic_vector(2 ** lpc_width - 1 downto 0);
     a:  in  std_logic_vector(lpc_width - 1 downto 0);
     en: in  std_logic;
-    q:  out std_logic_vector(2 ** lpc_width - 1 downto 0)
+    q:  out std_logic
 );
 end entity lpc_mx;
 
@@ -19,10 +19,10 @@ architecture rtl of lpc_mx is
 begin
     process (d, a, en) is
     begin
-        q <= (others => '0');
+        q <= '0';
 
         if en = '1' then
-            q(to_integer(unsigned(a))) <= d;
+            q <= d(to_integer(unsigned(a)));
         end if;
     end process;
 end architecture rtl;

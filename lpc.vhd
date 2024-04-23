@@ -139,10 +139,10 @@ generic (
     lpc_width: natural
 );
 port (
-    d:  in  std_logic;
+    d:  in  std_logic_vector(2 ** lpc_width - 1 downto 0);
     a:  in  std_logic_vector(lpc_width - 1 downto 0);
     en: in  std_logic;
-    q:  out std_logic_vector(2 ** lpc_width - 1 downto 0)
+    q:  out std_logic
 );
 end component lpc_mx;
 
@@ -151,10 +151,10 @@ generic (
     lpc_width: natural
 );
 port (
-    d:  in  std_logic_vector(2 ** lpc_width - 1 downto 0);
+    d:  in  std_logic;
     a:  in  std_logic_vector(lpc_width - 1 downto 0);
     en: in  std_logic;
-    q:  out std_logic
+    q:  out std_logic_vector(2 ** lpc_width - 1 downto 0)
 );
 end component lpc_dx;
 
