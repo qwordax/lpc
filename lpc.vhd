@@ -73,6 +73,14 @@ port (
 );
 end component lpc_xnor;
 
+component lpc_tri is
+port (
+    a:  in  std_logic;
+    en: in  std_logic;
+    q:  out std_logic
+);
+end component lpc_tri;
+
 component lpc_dff is
 port (
     r:  in  std_logic;
