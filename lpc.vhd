@@ -200,4 +200,20 @@ port (
 );
 end component lpc_comp;
 
+component lpc_ram is
+generic (
+    lpc_width_d: natural;
+    lpc_width_a: natural;
+    lpc_file:    string
+);
+port (
+    d:  in  std_logic_vector(lpc_width_d - 1 downto 0);
+    a:  in  std_logic_vector(lpc_width_a - 1 downto 0);
+    r:  in  std_logic;
+    w:  in  std_logic;
+    cl: in  std_logic;
+    q:  out std_logic_vector(lpc_width_d - 1 downto 0)
+);
+end component lpc_ram;
+
 end package components;
