@@ -166,6 +166,17 @@ port (
 );
 end component lpc_dx;
 
+component lpc_dc is
+generic (
+    lpc_width: natural
+);
+port (
+    d:  in  std_logic_vector(lpc_width - 1 downto 0);
+    en: in  std_logic;
+    q:  out std_logic_vector(2 ** lpc_width - 1 downto 0)
+);
+end component lpc_dc;
+
 component lpc_comp is
 generic (
     lpc_width: natural
